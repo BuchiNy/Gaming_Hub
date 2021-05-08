@@ -22,9 +22,23 @@
         android:id="@+id/exitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/exit"
+        android:layout_marginBottom="268dp"
         android:onClick="exit"
+        android:text="@string/exit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Welcome"
+        android:layout_width="298dp"
+        android:layout_height="54dp"
+        android:text="@string/welcome_to_the_game_hub"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

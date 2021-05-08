@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="center"
+    tools:context=".TicTacToeSingle">
+
+    <Button
+        android:id="@+id/TicTacToeStart"
+        android:layout_width="176dp"
+        android:layout_height="68dp"
+        android:text="@string/start_game"
+        android:textColor="#000000"
+        android:textColorHighlight="#2196F3"
+        android:textColorLink="#4CAF50"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.457" />
+
+    <TextView
+        android:id="@+id/TicTacToesingle"
+        android:layout_width="290dp"
+        android:layout_height="81dp"
+        android:text="Tic Tac Toe"
+        android:textAlignment="center"
+        android:textColor="#DF013239"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/TicTacToeStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

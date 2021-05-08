@@ -7,6 +7,8 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import java.lang.System.exit
+import kotlin.system.exitProcess
 
 open class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,11 +16,14 @@ open class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
+    //button to start the whole application
     fun start(view: View) {
         startActivity(Intent(this, GameActivity::class.java))
     }
 
+    //button to exit the application
     fun exit(view: View) {
+        finish()
     }
 
     // inflates overflow menu
@@ -31,16 +36,18 @@ open class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle item selection
         return when (item.itemId) {
+            //switch case statement
             R.id.faq -> {
-                // code..
+                // open the FQA window.
                 true
             }
             R.id.exit -> {
-                // code..
+                // closes the whole application
                 true
             }
             R.id.game_mode -> {
-                // code..
+                // opens the main game area
+                startActivity(Intent(this, GameActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)

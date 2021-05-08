@@ -1,10 +1,14 @@
 package com.buchi.gaminghub
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class SinglePlayerActivity : MainActivity() {
+		//Displaying of Single games in list form
     lateinit var singlePlayerGamesRv: RecyclerView
 
     val games: ArrayList<String> = ArrayList();
@@ -30,11 +34,17 @@ class SinglePlayerActivity : MainActivity() {
 
         gameAdapter.notifyDataSetChanged()
 
+        singlePlayerGamesRv.setOnClickListener {
+            Log.i("SinglePlayerActivity", "clicked")
+        }
+
+
     }
 
+    //Function to add games to the RecyclerView
     private fun loadGames() {
-        games.add("Flappy Bird")
-        games.add("Snake")
+        games.add("War Card")
     }
 
 }
+

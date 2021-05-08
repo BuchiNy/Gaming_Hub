@@ -10,9 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GamingHub">
         <activity
-            android:parentActivityName=".GameActivity"
+            android:name=".warGame"
+            android:label="@string/title_activity_war_game"
+            android:theme="@style/Theme.GamingHub.NoActionBar"></activity>
+        <activity android:name=".TicTacToeGame" />
+        <activity android:name=".MultiPlayerActivity" />
+        <activity android:name=".menu" />
+        <activity android:name=".TicTacToeSingle" />
+        <activity android:name=".MainActivity2" />
+        <activity
+            android:name=".SinglePlayerActivity"
             android:label="Single Player Games"
-            android:name=".SinglePlayerActivity"/>
+            android:parentActivityName=".GameActivity" />
         <activity
             android:name=".GameActivity"
             android:label="@string/game_mode_title"
