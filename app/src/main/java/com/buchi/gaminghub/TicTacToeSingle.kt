@@ -14,7 +14,7 @@ class TicTacToeSingle : MainActivity() {
     }
 
     // Navigation components
-    fun singlePlayerMode(view: View) {
+    fun TicTac(view: View) {
         startActivity(Intent(this, TicTacToeGame::class.java))
     }
 }

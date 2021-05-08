@@ -7,6 +7,7 @@
     tools:context=".SinglePlayerActivity">
 
     <androidx.recyclerview.widget.RecyclerView
+        android:clickable="true"
         android:id="@+id/singlePlayerGames"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

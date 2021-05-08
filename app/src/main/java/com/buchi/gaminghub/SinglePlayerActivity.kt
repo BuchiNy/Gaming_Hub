@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -19,8 +20,7 @@ class SinglePlayerActivity : MainActivity() {
 
         singlePlayerGamesRv = findViewById(R.id.singlePlayerGames)
 
-        // load games into ArrayList
-        loadGames()
+
 
         // create a vertical layout manger
         singlePlayerGamesRv.layoutManager = LinearLayoutManager(this)
@@ -34,15 +34,24 @@ class SinglePlayerActivity : MainActivity() {
 
         gameAdapter.notifyDataSetChanged()
 
-        singlePlayerGamesRv.setOnClickListener {
-            Log.i("SinglePlayerActivity", "clicked")
+        // load games into ArrayList
+        loadGames()
+
+        gameAdapter.onItemClick = { game ->
+
+            // do something with your item
+            Log.i("TAG", game)
+            when (game) {
+                "Tic Tac Toe" -> startActivity(Intent(this, TicTacToeSingle::class.java))
+                "War Card" -> startActivity(Intent(this, WarGame::class.java))
+                else -> Toast.makeText(this, "no game found...", Toast.LENGTH_SHORT).show()
+            }
         }
-
-
     }
 
     //Function to add games to the RecyclerView
     private fun loadGames() {
+        games.add("Tic Tac Toe")
         games.add("War Card")
     }
 

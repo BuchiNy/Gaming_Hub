@@ -13,13 +13,20 @@ class GameAdapter(private val dataSet: ArrayList<String>) :
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
      */
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView
+
+    var onItemClick: ((String) -> Unit)? = null
+
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val title: TextView
 
         init {
             // Define click listener for the ViewHolder's View.
-            textView = view.findViewById(R.id.game_name)
+            title = view.findViewById(R.id.game_name)
+            itemView.setOnClickListener {
+                onItemClick?.invoke(dataSet[adapterPosition])
+            }
         }
+
     }
 
     // Create new views (invoked by the layout manager)
@@ -36,7 +43,7 @@ class GameAdapter(private val dataSet: ArrayList<String>) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.textView.text = dataSet[position]
+        viewHolder.title.text = dataSet[position]
     }
 
     // Return the size of your dataset (invoked by the layout manager)

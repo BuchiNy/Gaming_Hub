@@ -10,14 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GamingHub">
         <activity
-            android:name=".warGame"
+            android:name=".WarGame"
             android:label="@string/title_activity_war_game"
             android:theme="@style/Theme.GamingHub.NoActionBar"></activity>
         <activity android:name=".TicTacToeGame" />
         <activity android:name=".MultiPlayerActivity" />
-        <activity android:name=".menu" />
         <activity android:name=".TicTacToeSingle" />
-        <activity android:name=".MainActivity2" />
         <activity
             android:name=".SinglePlayerActivity"
             android:label="Single Player Games"
